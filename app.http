@@ -1,0 +1,69 @@
+### Register API
+POST http://localhost:3000/register/
+Content-Type: application/json
+
+{
+    "username": "tamil_arasan",
+    "name": "Tamilarasan",
+    "password": "tamil@123",
+    "gender": "male",
+    "location": "Bangalore"
+}
+
+### 1.Login API 
+POST http://localhost:3000/login/
+Content-Type: application/json
+
+{
+  "username": "christopher_phillips",
+  "password": "christy@123"
+}
+
+### 2.GET States API 
+GET http://localhost:3000/states/
+Authorization: Barere eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzIyMDU5ODA0fQ.106Bif_pQLqHGZ4VSYjFCqn4phBncXyrsOwD2jixOYU
+
+### 3.GET State API 
+GET http://localhost:3000/states/8/
+Authorization: Barere eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzIyMDU5ODA0fQ.106Bif_pQLqHGZ4VSYjFCqn4phBncXyrsOwD2jixOYU
+
+
+### 4.Add Districts API 
+POST http://localhost:3000/districts/
+Authorization: Barere eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzIyMDU5ODA0fQ.106Bif_pQLqHGZ4VSYjFCqn4phBncXyrsOwD2jixOYU
+Content-Type: application/json
+
+{
+  "districtName": "Bagalkot",
+  "stateId": 3,
+  "cases": 2323,
+  "cured": 2000,
+  "active": 315,
+  "deaths": 8
+}
+
+### 5.GET District API 
+GET http://localhost:3000/districts/322/
+Authorization: Barere eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzIyMDU5ODA0fQ.106Bif_pQLqHGZ4VSYjFCqn4phBncXyrsOwD2jixOYU
+
+### 6.Delete District API 
+DELETE http://localhost:3000/districts/30/
+Authorization: Barere eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzIyMDU5ODA0fQ.106Bif_pQLqHGZ4VSYjFCqn4phBncXyrsOwD2jixOYU
+
+### 7.Update Distric API 
+PUT http://localhost:3000/districts/10/
+Authorization: Barere eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzIyMDU5ODA0fQ.106Bif_pQLqHGZ4VSYjFCqn4phBncXyrsOwD2jixOYU
+Content-Type: application/json
+
+{
+  "districtName": "Nadia",
+  "stateId": 3,
+  "cases": 9628,
+  "cured": 6524,
+  "active": 3000,
+  "deaths": 104
+}
+
+### 8.GET Statistics of Total Cases, Cured, Active, Deaths API
+GET http://localhost:3000/states/5/stats/
+Authorization: Barere eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImNocmlzdG9waGVyX3BoaWxsaXBzIiwiaWF0IjoxNzIyMDU5ODA0fQ.106Bif_pQLqHGZ4VSYjFCqn4phBncXyrsOwD2jixOYU
